@@ -16,16 +16,20 @@ app.get("/contactus.html", (req, res) => {
     res.sendFile(path.resolve(__dirname, "contactus.html"));
 });
 
-app.get("/aboutus.html", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "aboutus.html"));
+app.get("/js/scripts.js", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "js/scripts.js"));
 });
 
 app.get("/register.html", (req, res) => {
     res.sendFile(path.resolve(__dirname, "register.html"));
 });
 
-app.get("/co-investment.html", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "co-investment.html"));
+app.get("/css/styles.css", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "css/styles.css"));
+});
+
+app.get("/css/style.css", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "css/style.css"));
 });
 
 app.get("/project-partnership.html", (req, res) => {
