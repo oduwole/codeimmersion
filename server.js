@@ -20,6 +20,14 @@ app.get("/js/scripts.js", (req, res) => {
     res.sendFile(path.resolve(__dirname, "js/scripts.js"));
 });
 
+app.get("/js/pleasewait.js", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "js/pleasewait.js"));
+});
+
+app.get("/js/jquery.pleasewait.js", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "js/jquery.pleasewait.js"));
+});
+
 app.get("/register.html", (req, res) => {
     res.sendFile(path.resolve(__dirname, "register.html"));
 });
@@ -30,6 +38,9 @@ app.get("/css/styles.css", (req, res) => {
 
 app.get("/css/style.css", (req, res) => {
     res.sendFile(path.resolve(__dirname, "css/style.css"));
+});
+app.get("/css/pleasewait.css", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "css/pleasewait.css"));
 });
 
 app.get("/project-partnership.html", (req, res) => {
@@ -71,16 +82,16 @@ app.post('/sendmail', async (req, res) =>{
         }
       });
 
-      var messageBody = '<p><b>Name: </b>' + req.body.name + '<br />' +
+      var messageBody = '<p><b>Name: </b>' + req.body.firstname + ' ' + req.body.othername  + ' ' + req.body.lastname + '<br />' +
       '<b>Email: </b>' + req.body.email + '<br />' +
-      '<b>Subject: </b>' + req.body.subject + '<br />' +
+      '<b>Do you have a personal computer: </b>' + req.body.pc + '<br />' +
       '<b>Message: </b>' + req.body.message + '</p>'
       
       var mailOptions = {
         from: 'segxy2708@hotmail.com',
-        to: 'segun@impartlab.com',
+        to: 'rotimi.akintola10@gmail.com',
         //to: 'segun@impartlab.com',
-        subject: 'Inquiry: ' + req.body.subject ,
+        subject: 'Immersion Registration: ' ,
         //text: JSON.stringify(req.body)
         html: messageBody
       };
